@@ -24,7 +24,7 @@ def googleparse(question):
         soup = BeautifulSoup(
             requests.get(elem, params=params, headers=headers).content, "html.parser"
         )
-        print(soup.text)
+        print(soup.text.strip())
 
 
 

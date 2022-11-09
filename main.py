@@ -20,7 +20,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def search(self):
         print(' '.join(analyze(self.linedit.text())))
-        print(googleparse(' '.join(analyze(self.linedit.text()))))
+        googleparse(' '.join(analyze(self.linedit.text())))
 
 
 if __name__ == "__main__":

@@ -2,8 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 
 headers = {
-        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0"
-    }
+    "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0"
+}
 dict = ""
 query = input('What are you searching for?: ')
 url = "https://www.google.com/search"
