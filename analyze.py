@@ -41,4 +41,4 @@ def analyze(text):
     tokens = stopword_filter(tokens)
     tokens = lemmatize(tokens)
 
-    return {token for token in tokens if token}
+    return [token for token in tokens if token]

@@ -17,10 +17,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.text = ''
         self.page = ''
         self.dict = ''
+        self.label_2.setText('')
 
     def search(self):
         print(' '.join(analyze(self.linedit.text())))
-        googleparse(' '.join(analyze(self.linedit.text())))
+        self.label_2.setText(googleparse(' '.join(analyze(self.linedit.text()))))
 
 
 if __name__ == "__main__":

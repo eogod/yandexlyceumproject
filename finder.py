@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-
+import csv
 url_folder = []
 
 
@@ -24,7 +24,11 @@ def googleparse(question):
         soup = BeautifulSoup(
             requests.get(elem, params=params, headers=headers).content, "html.parser"
         )
-        print(soup.text.strip())
+        with open('data.csv') as csvfile:
+            writer = csv.writer(
+                csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            writer.writerow(elem)
+        return soup.text.strip()
 
 
 
