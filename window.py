@@ -39,9 +39,14 @@ class Ui_MainWindow(object):
         self.linedit.setGeometry(QtCore.QRect(90, 140, 421, 41))
         self.linedit.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.linedit.setObjectName("linedit")
+        self.pushButton2 = QtWidgets.QPushButton(self.groupBox)
+        self.pushButton2.setGeometry(QtCore.QRect(200, 230, 151, 41))
+        self.pushButton2.setStyleSheet("background-color: rgb(85, 85, 255);")
+        self.pushButton2.setObjectName("pushButton2")
         self.linedit.raise_()
         self.label.raise_()
         self.pushbutton.raise_()
+        self.pushButton2.raise_()
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
@@ -59,7 +64,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -68,5 +73,6 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:36pt; font-style:italic;\">YOOgle</span></p></body></html>"))
         self.pushbutton.setText(_translate("MainWindow", "Искать"))
         self.linedit.setText(_translate("MainWindow", "Введите запрос"))
+        self.pushButton2.setText(_translate("MainWindow", "searching history"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Tab 1"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Tab 2"))

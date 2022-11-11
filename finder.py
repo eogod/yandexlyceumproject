@@ -25,9 +25,9 @@ def googleparse(question):
         soup = BeautifulSoup(
             requests.get(elem, params=params, headers=headers).content, "html.parser"
         )
-        text = soup.text.replace('\n', "")
+        text = soup.text.replace('\n', " ")
         try:
             add_to_db(question, elem, text[:100])
         except:
             pass
-        return text
+        return text[:1000]
