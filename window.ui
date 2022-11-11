@@ -28,7 +28,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>601</width>
+      <width>591</width>
       <height>571</height>
      </rect>
     </property>
@@ -105,17 +105,14 @@
      <attribute name="title">
       <string>Tab 2</string>
      </attribute>
-     <widget class="QLabel" name="label_2">
+     <widget class="QTextEdit" name="textEdit">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>571</width>
-        <height>531</height>
+        <width>561</width>
+        <height>521</height>
        </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
       </property>
      </widget>
     </widget>

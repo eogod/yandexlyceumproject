@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
-import csv
+from docks import add_to_db
+
 url_folder = []
 
 
@@ -17,19 +18,16 @@ def googleparse(question):
     )
 
     for a in soup.select("a:has(h3)"):
-        print(a['href'])
+            # print(a['href'])
         url_folder.append(a["href"])
 
     for elem in url_folder:
         soup = BeautifulSoup(
             requests.get(elem, params=params, headers=headers).content, "html.parser"
         )
-        with open('data.csv') as csvfile:
-            writer = csv.writer(
-                csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            writer.writerow(elem)
-        return soup.text.strip()
-
-
-
-
+        text = soup.text.replace('\n', "")
+        try:
+            add_to_db(question, elem, text[:100])
+        except:
+            pass
+        return text
